@@ -19,23 +19,25 @@ const fradio2 = document.querySelector('#fradio2')
 const phone = document.querySelector("#phone");
 const femail = document.querySelector('#femail')
 
-const iti = intlTelInput(phone, {
-    initialCountry: "auto",
-    geoIpLookup: callback => {
-        fetch("https://ipapi.co/json")
-            .then(res => res.json())
-            .then(data => callback(data.country_code))
-            .catch(() => callback("us"));
-    },
-});
-
-const errorMap = ["Неправильный номер", "Неправильный код страны", "Слишком короткий номер", "Слишком длинный номер", "Неправильный номер"];
 
 
 if (emailForm) {
+
+    const iti = intlTelInput(phone, {
+        initialCountry: "auto",
+        geoIpLookup: callback => {
+            fetch("https://ipapi.co/json")
+                .then(res => res.json())
+                .then(data => callback(data.country_code))
+                .catch(() => callback("us"));
+        },
+    });
+
+    const errorMap = ["Неправильный номер", "Неправильный код страны", "Слишком короткий номер", "Слишком длинный номер", "Неправильный номер"];
+
     emailForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        
+
         const data = iti.getSelectedCountryData();
 
         if (!iti.isValidNumber()) {
