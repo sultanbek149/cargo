@@ -70,7 +70,7 @@ if (emailForm) {
 
 
         const url =
-            'https://wa.me/77082845343' + '?text=' +
+            'https://wa.me/77479903858' + '?text=' +
             'Товар:' + fwhat.value + '%0a' +
             'Откуда:' + ffrom.value + '%0a' +
             'Куда:' + fto.value + '%0a' +
