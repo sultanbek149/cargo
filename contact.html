@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Montserrat:wght@400;500;600;700&family=Rubik:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <script defer src="https://kit.fontawesome.com/a199b00d11.js" crossorigin="anonymous"></script>
+
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+  <script type="module" src="main.js"></script>
+
+  <title>Vite App</title>
+</head>
+
+<body>
+  <div id="app" class="wrapper bg-[#052555]">
+
+    <header class="fixed w-full z-20">
+      <div id="progressBar"></div>
+      <div class="container flex items-center py-4 text-black font-medium">
+        <img class="me-auto lg:me-[30px] h-[40px]" src="./assets/images/logo.png" alt="logo">
+        <nav class="nav-desktop hidden lg:flex me-auto">
+          <div class="relative">
+            <a href="index.html" class="mx-4">Главная
+            </a>
+          </div>
+          <div class="relative">
+            <a class="mx-4">Компания
+              <i class="fa-sharp fa-solid fa-caret-down ms-1"></i>
+            </a>
+            <div class="hidden modal modal-1 absolute">
+              <i class="fa-solid fa-caret-up fa-xl absolute top-[-.7%] left-1/2 -translate-x-2 text-white"></i>
+              <a href="about.html">О нас</a>
+              <a href="index.html#faq">Маршруты и направления</a>
+              <a href="index.html#faq">С какими грузами работаем</a>
+            </div>
+          </div>
+
+          <div class="relative">
+            <a class="mx-4">Грузоперевозки
+              <i class="fa-sharp fa-solid fa-caret-down ms-1"></i>
+            </a>
+            <div class="hidden modal modal-2 absolute">
+              <i class="fa-solid fa-caret-up fa-xl absolute top-[-.7%] left-1/2 -translate-x-2 text-white"></i>
+              <a href="index.html#services">Автоперевозки</a>
+              <a href="aviaroutes.html">Авиаперевозки</a>
+              <a href="#">Логистика для бизнеса</a>
+            </div>
+          </div>
+        </nav>
+
+        <div class="hidden md:flex items-center">
+          <a href="tel:+77007798641" class="hidden xl:inline phone me-[20px]">
+            +7 (700) 779-86-41
+          </a>
+
+          <a href="index.html#form"
+            class="hidden btn-pulse pulse lg:block hover:scale-[1.04] ease-linear transition rounded-[24px] px-[20px] py-[8px] bg-[#F04158] text-white">
+            Отправить запрос
+          </a>
+        </div>
+
+        <div class="z-20 hamburger-icon lg:hidden flex">
+          <button class="items-center">
+            <div data-hamburger class="hamburger">
+              <div class="line line-1"></div>
+              <div class="line line-2"></div>
+              <div class="line line-3"></div>
+            </div>
+          </button>
+        </div>
+
+
+        <nav data-navmobile class="nav-mobile fixed top-[64px] lg:hidden z-10 bg-white w-full left-0 text-black">
+          <div class="relative text-center text-[20px] mt-2">
+            <a href="index.html" class="mx-4">Главная
+            </a>
+            <div data-subcollapse href="#" class="mx-4">Компания
+              <i class="fa-sharp fa-solid fa-caret-down ms-1"></i>
+            </div>
+            <div data-subcontent class="modal modal-1 flex flex-col text-[15px]">
+              <a href="about.html">О нас</a>
+              <a href="index.html#faq">Маршруты и направления</a>
+              <a href="index.html#faq">С какими грузами работаем</a>
+            </div>
+          </div>
+
+          <div class="relative text-center text-[20px]">
+            <div data-subcollapse href="#" class="mx-4">Грузоперевозки
+              <i class="fa-sharp fa-solid fa-caret-down ms-1"></i>
+            </div>
+            <div data-subcontent class="modal modal-2 flex flex-col text-[15px]">
+              <a href="index.html#services">Автоперевозки</a>
+              <a href="aviaroutes.html">Авиаперевозки</a>
+              <a href="#">Логистика для бизнеса</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <section class="contacts pt-[72px] min-h-screen">
+      <div class="container">
+        <p class="title">
+          Отдел продаж
+        </p>
+
+        <div class="info text-white font-semibold flex flex-col gap-y-2 md:flex-row justify-between md:items-end mb-10">
+          <a href="tel:+77007798641" class="phone">
+            +7 (700) 779-86-41
+          </a>
+          <a href="mailto:order@alemzholy.kz" class="email">
+            order@alemzholy.kz
+          </a>
+        </div>
+
+        <div class="punct flex gap-5 items-center mb-10">
+          <img src="https://static.tildacdn.com/tild6438-3335-4138-b264-393137663362/_.svg" alt="star">
+          <p class="text-[#A9FF9E] text-[1rem] font-medium">
+            Отдел продаж работает <br>
+            с пн-пт, 09:00-18:00
+          </p>
+        </div>
+
+        <div class="line line-contact mb-10"></div>
+
+        <div
+          class="address-info flex flex-col items-start md:items-stretch md:flex-row justify-start gap-10 font-medium text-lg pb-10">
+          <div class="item">
+            Для корреспонденции: <br>
+            Юридический и фактический адрес: <br>
+            050000, Казахстан, Алматы, ул.Шевченко 204а<br>
+            ТЦ Саламат-1, 4-этаж <br>
+            БИН +++++++++
+          </div>
+
+          <div class="item">
+            Бухгалтерия и Юридический отдел <br>
+            +7 (747) 990-38-58 <br>
+            <a>info@alemzholy.kz </a>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+    <section class="maps py-[30px]">
+      <div class="container">
+        <div class="flex flex-col md:flex-row gap-10">
+          <iframe
+            src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad5a374611c1ac77704b56747ebe43f1e9b5e826a57a2626f0a8f062661b39485&amp;source=constructor"
+            frameborder="0" class="grow-[6] rounded-3xl"></iframe>
+
+          <form class="contactForm grow" method="post" id="contactForm">
+            <p class="text-white text-[42px] font-medium">
+              Оставьте заявку
+            </p>
+            <p class="text-white text-[14px] mb-4">
+              Ответим в течении 30 минут. <br> Работаем с пн-пт с 09:00 до 18:00
+            </p>
+
+            <div class="form__group">
+              <input class="form__input" type="email" id="cemail" name="cemail" placeholder="Укажите вашу почту" required
+                autocomplete="off">
+            </div>
+
+            <div class="form__group">
+              <input class="form__input" type="text" id="cname" name="cname" placeholder="Ваше имя" required
+                autocomplete="off">
+            </div>
+
+            <div class="form__group">
+              <input class="form__input" type="text" id="ctext" name="ctext" placeholder="Ваше сообщение" required
+                autocomplete="off">
+            </div>
+
+            <button class="form__submit py-[21px] px-[46px] bg-[#F00] text-white rounded-[14px] font-semibold mt-5 mb-4"
+              type="submit">Отправить</button>
+          </form>
+
+        </div>
+      </div>
+    </section>
+  </div>
+
+</body>
+
+</html>
