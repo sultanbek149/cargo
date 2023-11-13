@@ -15,14 +15,12 @@ const ffrom = document.querySelector('#ffrom')
 const fto = document.querySelector('#fto')
 const fweight = document.querySelector('#fweight')
 const fradio1 = document.querySelector('#fradio1')
-const fradio2 = document.querySelector('#fradio2')
 const phone = document.querySelector("#phone");
 const femail = document.querySelector('#femail')
 
 
 
 if (emailForm) {
-
     const iti = intlTelInput(phone, {
         initialCountry: "auto",
         geoIpLookup: callback => {
