@@ -26,15 +26,24 @@ h1 {
 
 .services h3 {
   @apply font-semibold  my-[60px] md:mt-[90px];
-  font-size: clamp(2.3125rem, 2.0276rem + 1.2155vw, 3rem);
+  font-size: clamp(2.3125rem, 2.0276rem + 1.2155vw, 2.75rem);
 }
 
 .deliver h2 {
-  font-size: clamp(1.75rem, 1.5687rem + 0.7735vw, 2.1875rem);
+  font-size: clamp(1.75rem, 1.5687rem + 0.7735vw, 2.05rem);
 }
 
 .partners h3 {
   font-size: clamp(2.3125rem, 2.0276rem + 1.2155vw, 3rem);
+}
+
+
+.carousel .item {
+  @apply w-full md:w-[45%] xl:w-[30%] max-h-[50px] xl:max-h-[70px] flex items-center ;
+}
+
+.carousel .item img {
+  @apply max-w-[200px] xl:max-w-[300px] h-full mx-auto;
 }
 
 .ways h4 {
@@ -356,7 +365,7 @@ span.blue {
 }
 
 .choose .item {
-  @apply w-[350px] h-[350px] sm:w-1/2 sm:max-w-[350px] sm:h-[400px] lg:max-w-none lg:w-1/2 lg:h-[480px];
+  @apply max-w-[350px] h-[350px] sm:w-1/2 sm:max-w-[350px] sm:h-[400px] lg:max-w-none lg:w-1/2 lg:h-[480px];
 }
 
 .choose .item-img {
