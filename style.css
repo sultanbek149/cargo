@@ -365,7 +365,7 @@ span.blue {
 }
 
 .choose .item {
-  @apply max-w-[350px] h-[350px] sm:w-1/2 sm:max-w-[350px] sm:h-[400px] lg:max-w-none lg:w-1/2 lg:h-[480px];
+  @apply max-w-[350px] w-full h-[350px] sm:w-1/2 sm:max-w-[350px] sm:h-[400px] lg:max-w-none lg:w-1/2 lg:h-[480px];
 }
 
 .choose .item-img {
