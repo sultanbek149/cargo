@@ -37,9 +37,8 @@ h1 {
   font-size: clamp(2.3125rem, 2.0276rem + 1.2155vw, 3rem);
 }
 
-
 .carousel .item {
-  @apply w-full md:w-[45%] xl:w-[30%] max-h-[50px] xl:max-h-[70px] flex items-center ;
+  @apply w-full md:w-[45%] xl:w-[30%] max-h-[50px] xl:max-h-[70px] flex items-center;
 }
 
 .carousel .item img {
@@ -140,7 +139,7 @@ span.blue {
 }
 
 .bannerFly {
-  background-image: url("https://media.cnn.com/api/v1/images/stellar/prod/201201101630-jet-test-2.jpg?q=w_3471,h_1953,x_0,y_0,c_fill")
+  background-image: url("https://media.cnn.com/api/v1/images/stellar/prod/201201101630-jet-test-2.jpg?q=w_3471,h_1953,x_0,y_0,c_fill");
 }
 
 .bannerFly::after {
@@ -152,6 +151,7 @@ span.blue {
   height: 100%;
   background-image: linear-gradient(120deg, #222308, #222308);
   opacity: 0.6;
+  max-height: 800px;
 }
 
 .bannerFly .container {
@@ -958,14 +958,13 @@ span.blue-2 {
   }
 
   .aboutus .img-1 {
-    min-height:auto;
+    min-height: auto;
   }
   .aboutus .img-3,
   .aboutus .img-2 {
     min-height: auto;
   }
 }
-
 
 iframe {
   min-height: 300px;
